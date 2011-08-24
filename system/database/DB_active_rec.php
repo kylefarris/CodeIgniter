@@ -960,6 +960,33 @@ class CI_DB_active_record extends CI_DB_driver {
 		$this->_reset_select();
 		return $result;
 	}
+	
+	// --------------------------------------------------------------------
+
+	/**
+	 * Get
+	 *
+	 * Compiles the select statement based on the other functions called
+	 * and returns the query
+	 *
+	 * @param	string	the table
+	 * @param	boolean	if false, don't reset the select 
+	 * @return	object
+	 */
+	public function get_query($table = '',$reset = TRUE)  
+	{
+		if ($table != '')
+		{
+			$this->_track_aliases($table);
+			$this->from($table);
+		}
+		$select =  $this->_compile_select();
+		if ($reset === TRUE)
+		{
+			$this->_reset_select();
+		}
+		return $select;
+	}
 
 	/**
 	 * "Count All Results" query
