@@ -77,7 +77,8 @@ Change Log
 		<ul>
 			<li class="reactor">Added a <a href="http://www.cubrid.org/" target="_blank">CUBRID</a> driver to the <a href="libraries/database.html">Database Driver</a>. Thanks to the CUBRID team for supplying this patch.</li>
 			<li class="reactor">Typecast limit and offset in the <a href="database/queries.html">Database Driver</a> to integers to avoid possible injection.</li>
-			<li class="reactor">Added new <a href="database/active_record.html">Active Record</a> methods that return the SQL string of queries without executing them: <kbd>get_compiled_select()</kbd>, <kbd>get_compiled_insert()</kbd>, <kbd>get_compiled_update()</kbd>, <kbd>get_compiled_delete()</kbd>. 
+			<li class="reactor">Added new publicly-visible <a href="database/active_record.html">Active Record</a> methods that return the SQL string of queries without executing them: <kbd>get_compiled_select()</kbd>, <kbd>get_compiled_insert()</kbd>, <kbd>get_compiled_update()</kbd>, <kbd>get_compiled_delete()</kbd>.
+			<li class="reattor">Added new publicly-visible <a href="database/active_record.html">Active Record</a> method that allows you to reset the Active Record object manually: <kbd>reset_query()</kbd></p>
 		</ul>
 	</li>
 	<li>Libraries
